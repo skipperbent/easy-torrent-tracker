@@ -7,7 +7,7 @@ https://gist.github.com/nsuan/1967006
 
 ## Pre-note
 
-Trackers are putting on an extremely hard job in maintaining their trackers and dealing with their trackers being taken down or hosts forcing them to shut down, 
+Owners of trackers are putting on an extremely hard task in maintaining their trackers and dealing with their trackers being taken down or hosts forcing them to shut down, 
 even though the service is perfectly legal. And most of the people administering trackers don't make any money, as there's no way to advertise using a tracker. 
 That's why we need to show them support and help them out by creating as many small trackers as possible.
 
