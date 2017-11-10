@@ -199,7 +199,7 @@ function db_open()
 
     fclose($handle);
 
-    return ($p !== '') ? unserialize($p) : true;
+    return ((string)$p !== '') ? unserialize($p) : true;
 }
 
 //Check if DB file exists, otherwise create it
@@ -322,7 +322,7 @@ if (!__DEBUGGING_ENABLED) {
 
 //Did the client stop the torrent?
 //We dont care about other events
-if (isset($_GET['event']) && $_GET['event'] === 'stopped') {
+if (isset($_GET['event']) && (string)$_GET['event'] === 'stopped') {
     unset($d[$sum]);
     db_save($d);
     die(track([])); //The RFC says its OK to return whatever we want when the client stops downloading,
@@ -342,7 +342,7 @@ db_save($d);
 
 //Compare info_hash to the rest of our clients and remove anyone who does not have the correct torrent
 foreach ($d as $id => $info) {
-    if ($info[4] !== $_GET['info_hash']) {
+    if ((string)$info[4] !== (string)$_GET['info_hash']) {
         unset($d[$id]);
     }
 }
